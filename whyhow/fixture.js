@@ -3,7 +3,7 @@ export default function(tx) {
   tx.create({
     id: 'p1',
     type: 'paragraph',
-    content: "Insert a new image using the image tool."
+    content: "Insert a new image using the image tool or copy-paste."
   })
   body.show('p1')
 
@@ -11,7 +11,7 @@ export default function(tx) {
     id: 'f1',
     type: 'file',
     fileType: 'image',
-    url: 'https://pbs.twimg.com/profile_images/706616363599532032/b5z-Hw5g.jpg'
+    url: 'https://www.yolean.com/wp-content/uploads/2016/08/yolean-logo-hemsida-e1471981170739.png'
   })
   tx.create({
     id: 'i1',
@@ -31,4 +31,10 @@ export default function(tx) {
     imageFile: 'f1'
   })
   body.show('i2')
+  tx.create({
+    id: 'p3',
+    type: 'paragraph',
+    content: "TODO: fit in a constrained element"
+  });
+  body.show('p3');
 }

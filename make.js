@@ -18,6 +18,7 @@ var examples = [
   'table',
   'isolated-nodes',
   'tangle',
+  'whyhow'
 ]
 
 b.task('clean', function() {
@@ -70,7 +71,7 @@ b.task('dev', ['clean', 'dev:assets', 'dev:examples'])
 // starts a server when CLI argument '-s' is set
 b.setServerPort(80)
 b.serve({
-  static: true, route: '/', folder: 'dist'
+  static: true, route: '/checksheets', folder: 'dist'
 })
 
 // builds one example

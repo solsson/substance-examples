@@ -10,6 +10,6 @@ COPY ./ .
 
 RUN npm run bundle && npm ls substance
 
-EXPOSE 5555
+EXPOSE 80
 
 ENTRYPOINT ["npm", "start"]

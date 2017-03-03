@@ -33,11 +33,13 @@ cfg.import(PersistencePackage)
 cfg.setSaveHandlerClass(SaveHandlerStub)
 
 window.onload = function() {
+  let editor = document.getElementById('whyhow1');
+  console.log('editor element', editor);
   let doc = cfg.createArticle(fixture)
   let editorSession = new EditorSession(doc, {
     configurator: cfg
   })
   ProseEditor.mount({
     editorSession: editorSession
-  }, document.body)
+  }, editor)
 }
